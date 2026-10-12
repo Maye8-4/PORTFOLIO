@@ -1,5 +1,5 @@
 /* =========================================
-   1. GLOBAL RESET & PROFESSIONAL THEME
+   1. GLOBAL RESET & TECH THEME
 ========================================= */
 * {
   margin: 0;
@@ -13,14 +13,14 @@ html {
 }
 
 body {
-  color: #e2e8f0;
-  background-color: #12161f;
+  color: #94a3b8;
+  background-color: #0b0f19;
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
 }
 
-/* Subtle background accent glow */
+/* Subtle tech grid background effect */
 body::before {
   content: "";
   position: fixed;
@@ -28,14 +28,17 @@ body::before {
   height: 100vh;
   top: 0;
   left: 0;
-  background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.05), transparent 60%),
-              radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.04), transparent 50%);
+  background-image: 
+    radial-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 197, 94, 0.015) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(34, 197, 94, 0.015) 1px, transparent 1px);
+  background-size: 40px 40px, 80px 80px, 80px 80px;
   pointer-events: none;
   z-index: -1;
 }
 
 section {
-  padding: 100px 10%;
+  padding: 100px 8%;
   position: relative;
 }
 
@@ -45,9 +48,9 @@ h2, h3 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #f8fafc;
 }
 
@@ -65,10 +68,10 @@ h2 {
 .navbar {
   position: fixed;
   top: 20px;
-  left: 10%;
-  right: 10%;
-  padding: 12px 28px;
-  background-color: rgba(18, 22, 31, 0.85);
+  left: 8%;
+  right: 8%;
+  padding: 14px 28px;
+  background-color: rgba(11, 15, 25, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -77,35 +80,36 @@ h2 {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .nav-brand {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 700;
+  font-size: 1.15rem;
   color: #ffffff;
+  font-family: monospace;
+  letter-spacing: 0.05em;
 }
 
 .nav-logo {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, #38bdf8, #6366f1);
-  color: #ffffff;
-  border-radius: 50%;
-  font-weight: 700;
+  padding: 4px 10px;
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 8px;
   font-size: 0.9rem;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 30px;
 }
 
 .nav-links a {
@@ -117,22 +121,22 @@ h2 {
 }
 
 .nav-links a:hover {
-  color: #f8fafc;
+  color: #22c55e;
 }
 
 .nav-contact-btn {
-  padding: 8px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  color: #ffffff !important;
+  padding: 9px 20px !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(34, 197, 94, 0.4) !important;
+  border-radius: 20px !important;
+  color: #22c55e !important;
   transition: all 0.25s ease !important;
 }
 
 .nav-contact-btn:hover {
-  background-color: #38bdf8;
-  border-color: #38bdf8;
-  color: #0f172a !important;
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+  background-color: #22c55e !important;
+  color: #0b0f19 !important;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
 }
 
 /* =========================================
@@ -141,41 +145,42 @@ h2 {
 
 .btn-futuristic {
   display: inline-block;
-  padding: 12px 26px;
-  color: #f8fafc;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 13px 28px;
+  color: #0b0f19;
+  background-color: #22c55e;
+  border: 1px solid #22c55e;
   text-decoration: none;
   border-radius: 8px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.25s ease;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
 }
 
 .btn-futuristic:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: #38bdf8;
-  color: #38bdf8;
+  background-color: #16a34a;
+  border-color: #16a34a;
   transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
 }
 
 .card-futuristic {
-  background-color: #1a202c;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 12px;
-  padding: 28px;
+  background-color: rgba(18, 24, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .card-futuristic:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-color: rgba(34, 197, 94, 0.3);
 }
 
 .card-futuristic h3 {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   color: #f8fafc;
   margin-bottom: 10px;
 }
@@ -184,7 +189,7 @@ h2 {
   margin-top: 15px; 
   color: #94a3b8;
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* =========================================
@@ -193,31 +198,33 @@ h2 {
 
 /* HERO Section */
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 12%;
 }
 
 .hero h1 {
-  font-size: 3.8rem;
+  font-size: 4rem;
   margin-bottom: 15px;
-  font-weight: 700;
+  font-weight: 800;
   color: #f8fafc;
+  line-height: 1.1;
 }
 
 .hero h1 span {
-  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  background: linear-gradient(135deg, #22c55e, #06b6d4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: #94a3b8;
-  max-width: 650px;
+  max-width: 600px;
   margin-bottom: 35px;
   font-weight: 400;
 }
@@ -225,31 +232,31 @@ h2 {
 .hero-buttons {
   display: flex;
   gap: 15px;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
-/* ABOUT ME Section with Small Circular Picture */
+/* ABOUT ME Section with Circular Picture & Terminal Badge */
 .about-card {
   max-width: 850px;
   margin: 0 auto;
+  border-top: 2px solid #22c55e;
 }
 
 .about-container-grid {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 40px;
   text-align: left;
 }
 
 .about-image-wrapper {
   flex-shrink: 0;
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #38bdf8;
-  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+  border: 2px solid #22c55e;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.25);
 }
 
 .about-profile-img {
@@ -267,7 +274,7 @@ h2 {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
+  gap: 30px;
 }
 
 .card-details-table {
@@ -275,16 +282,17 @@ h2 {
   font-size: 0.85rem;
   color: #94a3b8;
   border-collapse: collapse;
-  margin-top: 12px;
+  margin-top: 15px;
 }
 
 .card-details-table td {
-  padding: 6px 0;
+  padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .detail-label {
-  color: #cbd5e1;
+  color: #22c55e;
+  font-family: monospace;
   font-weight: 600;
   width: 90px;
 }
@@ -298,23 +306,25 @@ h2 {
 
 .project-card-tags span {
   font-size: 0.75rem;
+  font-family: monospace;
   font-weight: 500;
-  color: #e2e8f0;
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #22c55e;
+  background-color: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.25);
   padding: 4px 12px;
-  border-radius: 20px;
+  border-radius: 6px;
 }
 
 /* SKILLS Section */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 30px;
 }
 
 .skill-subtitle {
-  color: #38bdf8;
+  color: #22c55e;
+  font-family: monospace;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 10px;
@@ -322,13 +332,18 @@ h2 {
 
 /* CONTACT SECTION */
 .contact-container {
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+  background-color: rgba(18, 24, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 50px;
 }
 
 .contact-tag {
-  color: #38bdf8;
+  color: #22c55e;
+  font-family: monospace;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -336,8 +351,10 @@ h2 {
 }
 
 .contact h2 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
+  text-align: left;
+  color: #f8fafc;
 }
 
 .contact-subtitle {
@@ -349,30 +366,30 @@ h2 {
 .contact-buttons {
   display: flex;
   gap: 15px;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
 .btn-contact-primary {
-  padding: 12px 28px;
-  background-color: #38bdf8;
-  color: #0f172a;
+  padding: 13px 28px;
+  background-color: #22c55e;
+  color: #0b0f19;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.25s ease;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
 }
 
 .btn-contact-primary:hover {
-  background-color: #7dd3fc;
+  background-color: #16a34a;
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35);
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
 }
 
 .btn-contact-secondary {
-  padding: 12px 28px;
-  background-color: rgba(255, 255, 255, 0.05);
+  padding: 13px 28px;
+  background-color: rgba(255, 255, 255, 0.03);
   color: #f8fafc;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
@@ -383,18 +400,18 @@ h2 {
 }
 
 .btn-contact-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(34, 197, 94, 0.4);
   transform: translateY(-2px);
 }
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .navbar { left: 5%; right: 5%; }
-  .hero h1 { font-size: 2.8rem; }
+  .hero { padding-left: 8%; text-align: center; align-items: center; }
+  .hero h1 { font-size: 3rem; }
   .hero-subtitle { font-size: 1.1rem; }
   h2 { font-size: 2.1rem; }
-  .contact h2 { font-size: 2.1rem; }
   .skills-grid { grid-template-columns: 1fr; }
   
   .about-container-grid {
@@ -407,5 +424,14 @@ h2 {
   }
   .about-text-content .card-desc {
     text-align: center !important;
+  }
+  .contact-container {
+    text-align: center;
+  }
+  .contact h2 {
+    text-align: center;
+  }
+  .contact-buttons {
+    justify-content: center;
   }
 }
