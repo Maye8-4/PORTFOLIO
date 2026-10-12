@@ -197,16 +197,6 @@ h2 {
   z-index: -1;
 }
 
-.hero-tagline {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 600;
-  color: #c77dff;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-size: 0.85rem;
-  margin-bottom: 20px;
-}
-
 .hero h1 {
   font-size: 4rem;
   margin-bottom: 15px;
@@ -252,7 +242,7 @@ h2 {
   pointer-events: none;
 }
 
-/* ABOUT ME Section & Profile Picture */
+/* ABOUT ME Section */
 .about-card {
   max-width: 750px;
   margin: 0 auto;
@@ -263,21 +253,6 @@ h2 {
   font-size: 1.05rem;
   line-height: 1.7;
   font-weight: 300;
-}
-
-.about-image-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.about-img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #b026ff;
-  box-shadow: 0 0 20px rgba(176, 38, 255, 0.3);
 }
 
 /* PROJECTS Section */
