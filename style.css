@@ -8,6 +8,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #FFFFFF;
   background-color: #0b0218;
@@ -63,10 +67,83 @@ h2 {
 }
 
 /* =========================================
-   2. REUSABLE UI ELEMENTS (Minimalist Tech)
+   2. NAVIGATION BAR
+========================================= */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 10%;
+  right: 10%;
+  padding: 12px 28px;
+  background-color: rgba(18, 5, 38, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(176, 38, 255, 0.2);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.nav-logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #b026ff;
+  color: #ffffff;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e0aaff;
+}
+
+.nav-contact-btn {
+  padding: 8px 18px;
+  border: 1px solid rgba(176, 38, 255, 0.5);
+  border-radius: 20px;
+  color: #ffffff !important;
+  transition: all 0.3s ease !important;
+}
+
+.nav-contact-btn:hover {
+  background-color: #b026ff;
+  border-color: #b026ff;
+  box-shadow: 0 0 15px rgba(176, 38, 255, 0.4);
+}
+
+/* =========================================
+   3. REUSABLE UI ELEMENTS
 ========================================= */
 
-/* Minimalist Purple Outline Button */
 .btn-futuristic {
   display: inline-block;
   padding: 12px 28px;
@@ -92,7 +169,6 @@ h2 {
   transform: translateY(-2px);
 }
 
-/* Minimalist tech card with precise corner accents */
 .card-futuristic {
   background-color: rgba(26, 8, 54, 0.4);
   border: 1px solid rgba(176, 38, 255, 0.2);
@@ -103,7 +179,6 @@ h2 {
   backdrop-filter: blur(10px);
 }
 
-/* Subtle engineering corner accents */
 .card-futuristic::before {
   content: "";
   position: absolute;
@@ -175,7 +250,7 @@ h2 {
 }
 
 /* =========================================
-   3. SECTION SPECIFIC STYLES
+   4. SECTION SPECIFIC STYLES
 ========================================= */
 
 /* HERO Section */
@@ -223,7 +298,7 @@ h2 {
   flex-wrap: wrap;
 }
 
-/* Subtle minimalist background glows */
+/* Background flares */
 .blue-flare-top {
   position: absolute;
   width: 350px; height: 350px;
@@ -323,10 +398,93 @@ h2 {
   letter-spacing: 0.1em;
 }
 
+/* CONTACT SECTION */
+.contact {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  text-align: left;
+}
+
+.contact-container {
+  max-width: 800px;
+}
+
+.contact-tag {
+  font-family: 'Courier New', Courier, monospace;
+  color: #b026ff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+}
+
+.contact h2 {
+  text-align: left;
+  font-size: 3.2rem;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: #ffffff;
+}
+
+.contact-subtitle {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 35px;
+  font-weight: 300;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-contact-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #b026ff;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(176, 38, 255, 0.3);
+}
+
+.btn-contact-primary:hover {
+  background-color: #c77dff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(176, 38, 255, 0.5);
+}
+
+.btn-contact-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-contact-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
+  .navbar { left: 5%; right: 5%; }
   .hero h1 { font-size: 2.8rem; }
   .hero-subtitle { font-size: 1.2rem; }
   h2 { font-size: 2.1rem; }
+  .contact h2 { font-size: 2.2rem; }
   .skills-grid { grid-template-columns: 1fr; }
 }
