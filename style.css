@@ -174,15 +174,6 @@ h2 {
   border-color: rgba(56, 189, 248, 0.3);
 }
 
-.card-code-detail {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #38bdf8;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 12px;
-}
-
 .card-futuristic h3 {
   font-size: 1.35rem;
   color: #f8fafc;
@@ -238,16 +229,38 @@ h2 {
   flex-wrap: wrap;
 }
 
-/* ABOUT ME Section */
+/* ABOUT ME Section with Picture */
 .about-card {
-  max-width: 750px;
+  max-width: 850px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.about-card .card-desc {
-  font-size: 1.05rem;
-  line-height: 1.75;
+.about-container-grid {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  text-align: left;
+}
+
+.about-image-wrapper {
+  flex-shrink: 0;
+  width: 210px;
+  height: 210px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-text-content {
+  flex-grow: 1;
 }
 
 /* PROJECTS Section */
@@ -283,7 +296,6 @@ h2 {
   margin-top: 20px;
 }
 
-/* Modern pill tags */
 .project-card-tags span {
   font-size: 0.75rem;
   font-weight: 500;
@@ -384,4 +396,16 @@ h2 {
   h2 { font-size: 2.1rem; }
   .contact h2 { font-size: 2.1rem; }
   .skills-grid { grid-template-columns: 1fr; }
+  
+  .about-container-grid {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-text-content .project-card-tags {
+    justify-content: center !important;
+  }
+  .about-text-content .card-desc {
+    text-align: center !important;
+  }
 }
