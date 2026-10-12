@@ -207,6 +207,7 @@ h2 {
 }
 
 .hero-tagline {
+  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
@@ -257,7 +258,7 @@ h2 {
   pointer-events: none;
 }
 
-/* ABOUT ME Section */
+/* ABOUT ME Section & Picture */
 .about-card {
   max-width: 800px;
   margin: 0 auto;
@@ -267,6 +268,21 @@ h2 {
 .about-card .card-desc {
   font-size: 1.1rem;
   line-height: 1.8;
+}
+
+.about-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.about-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #b026ff;
+  box-shadow: 0 0 15px rgba(176, 38, 255, 0.4);
 }
 
 /* PROJECTS Section */
