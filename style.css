@@ -229,7 +229,7 @@ h2 {
   flex-wrap: wrap;
 }
 
-/* ABOUT ME Section with Picture */
+/* ABOUT ME Section with Small Circular Picture */
 .about-card {
   max-width: 850px;
   margin: 0 auto;
@@ -244,12 +244,12 @@ h2 {
 
 .about-image-wrapper {
   flex-shrink: 0;
-  width: 210px;
-  height: 210px;
-  border-radius: 12px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
   overflow: hidden;
-  border: 2px solid rgba(56, 189, 248, 0.3);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 3px solid #38bdf8;
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
 }
 
 .about-profile-img {
