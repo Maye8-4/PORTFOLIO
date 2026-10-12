@@ -10,13 +10,13 @@
 
 body {
   color: #FFFFFF;
-  background-color: #0d0121;
+  background-color: #0b0218;
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
 }
 
-/* Full-screen geometric/tech background layers */
+/* Full-screen minimalist tech background layers */
 body::before, body::after {
   content: "";
   position: fixed;
@@ -28,19 +28,19 @@ body::before, body::after {
   z-index: -1;
 }
 
-/* Layer 1: Base color gradient */
+/* Layer 1: Deep purple gradient */
 body::before {
-  background: linear-gradient(135deg, #2b0c5a 0%, #0d0121 100%);
+  background: linear-gradient(135deg, #1f0542 0%, #0b0218 100%);
   opacity: 0.95;
 }
 
-/* Layer 2: Geometric & tech overlays (dots and grid) */
+/* Layer 2: Subtle circuit/grid line pattern */
 body::after {
   background-image: 
-    radial-gradient(#FFFFFF15 1px, transparent 1px), 
-    linear-gradient(90deg, #FFFFFF05 1px, transparent 1px), 
-    linear-gradient(0deg, #FFFFFF05 1px, transparent 1px);
-  background-size: 30px 30px, 80px 80px, 80px 80px;
+    radial-gradient(#b026ff10 1px, transparent 1px), 
+    linear-gradient(90deg, #b026ff05 1px, transparent 1px), 
+    linear-gradient(0deg, #b026ff05 1px, transparent 1px);
+  background-size: 40px 40px, 100px 100px, 100px 100px;
 }
 
 section {
@@ -49,31 +49,35 @@ section {
 }
 
 h2, h3 {
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.05em;
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   text-align: center;
   margin-bottom: 50px;
+  background: linear-gradient(90deg, #ffffff, #b026ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* =========================================
-   2. REUSABLE UI ELEMENTS
+   2. REUSABLE UI ELEMENTS (Minimalist Tech)
 ========================================= */
 
-/* Futuristic Purple Outline Button */
+/* Minimalist Purple Outline Button */
 .btn-futuristic {
   display: inline-block;
-  padding: 12px 30px;
+  padding: 12px 28px;
   margin-top: 25px;
-  color: #FFFFFF;
-  background-color: rgba(176, 38, 255, 0.1);
-  border: 2px solid #b026ff;
+  color: #ffffff;
+  background-color: rgba(176, 38, 255, 0.05);
+  border: 1px solid rgba(176, 38, 255, 0.4);
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -81,105 +85,93 @@ h2 {
   overflow: hidden;
 }
 
-.btn-futuristic::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: all 0.5s;
-}
-
 .btn-futuristic:hover {
-  background-color: #b026ff;
-  box-shadow: 0 0 15px rgba(176, 38, 255, 0.6);
+  background-color: rgba(176, 38, 255, 0.2);
+  border-color: #b026ff;
+  box-shadow: 0 0 20px rgba(176, 38, 255, 0.25);
+  transform: translateY(-2px);
 }
 
-.btn-futuristic:hover::after {
-  left: 100%;
-}
-
-/* Complex futuristic card with tech frame corners */
+/* Minimalist tech card with precise corner accents */
 .card-futuristic {
-  background-color: rgba(43, 12, 90, 0.6);
-  border: 2px solid transparent;
-  border-radius: 12px;
+  background-color: rgba(26, 8, 54, 0.4);
+  border: 1px solid rgba(176, 38, 255, 0.2);
+  border-radius: 8px;
   padding: 30px;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
+/* Subtle engineering corner accents */
 .card-futuristic::before {
   content: "";
   position: absolute;
-  width: 60px;
-  height: 60px;
-  top: -2px;
-  right: -2px;
-  border-top: 4px solid #b026ff;
-  border-right: 4px solid #b026ff;
+  width: 15px;
+  height: 15px;
+  top: -1px;
+  right: -1px;
+  border-top: 2px solid #b026ff;
+  border-right: 2px solid #b026ff;
   pointer-events: none;
-  border-top-right-radius: 12px;
 }
 
 .card-futuristic::after {
   content: "";
   position: absolute;
-  width: 60px;
-  height: 60px;
-  bottom: -2px;
-  left: -2px;
-  border-bottom: 4px solid #b026ff;
-  border-left: 4px solid #b026ff;
+  width: 15px;
+  height: 15px;
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 2px solid #b026ff;
+  border-left: 2px solid #b026ff;
   pointer-events: none;
-  border-bottom-left-radius: 12px;
 }
 
 .card-inner-detail {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 20px;
-  left: 20px;
-  border-top: 2px solid rgba(255, 255, 255, 0.3);
-  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  width: 8px;
+  height: 8px;
+  top: 15px;
+  left: 15px;
+  background-color: rgba(176, 38, 255, 0.5);
+  border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 .card-futuristic h3 {
-  font-size: 1.5rem;
-  color: #b026ff;
+  font-size: 1.3rem;
+  color: #e0aaff;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
 }
 
 .card-code-detail {
   font-family: 'Courier New', Courier, monospace;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
   text-align: center;
   margin-bottom: 20px;
-  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .card-desc {
   margin-top: 15px; 
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.95rem;
 }
 
 .card-futuristic:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(176, 38, 255, 0.3);
-  border-color: #b026ff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(176, 38, 255, 0.15);
+  border-color: rgba(176, 38, 255, 0.6);
 }
 
 .card-futuristic:hover .card-inner-detail {
-  border-color: #b026ff;
+  background-color: #b026ff;
+  box-shadow: 0 0 8px #b026ff;
 }
 
 /* =========================================
@@ -200,36 +192,38 @@ h2 {
 .hero-pattern-overlay {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background-image: linear-gradient(rgba(176, 38, 255, 0.05) 1px, transparent 1px);
-  background-size: 100% 20px;
-  opacity: 0.5;
+  background-image: linear-gradient(rgba(176, 38, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 30px;
   z-index: -1;
 }
 
 .hero-tagline {
   font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  color: #c77dff;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
+  font-size: 0.85rem;
   margin-bottom: 20px;
 }
 
 .hero h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   margin-bottom: 15px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .hero h1 span {
-  color: #b026ff;
+  color: #e0aaff;
+  text-shadow: 0 0 20px rgba(176, 38, 255, 0.4);
 }
 
 .hero-subtitle {
-  font-size: 1.8rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
   max-width: 700px;
   margin-bottom: 30px;
+  font-weight: 300;
 }
 
 .hero-buttons {
@@ -239,35 +233,36 @@ h2 {
   flex-wrap: wrap;
 }
 
-/* Background light flares */
+/* Subtle minimalist background glows */
 .blue-flare-top {
   position: absolute;
-  width: 400px; height: 400px;
+  width: 350px; height: 350px;
   top: -100px; left: -100px;
-  background: radial-gradient(circle, rgba(147, 51, 234, 0.25) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(114, 9, 183, 0.2) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
 
 .magenta-flare-right {
   position: absolute;
-  width: 500px; height: 500px;
-  bottom: 100px; right: -150px;
-  background: radial-gradient(circle, rgba(176, 38, 255, 0.2) 0%, transparent 70%);
+  width: 450px; height: 450px;
+  bottom: 50px; right: -150px;
+  background: radial-gradient(circle, rgba(176, 38, 255, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
 
-/* ABOUT ME Section & Picture */
+/* ABOUT ME Section & Profile Picture */
 .about-card {
-  max-width: 800px;
+  max-width: 750px;
   margin: 0 auto;
   text-align: center;
 }
 
 .about-card .card-desc {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-weight: 300;
 }
 
 .about-image-container {
@@ -277,17 +272,17 @@ h2 {
 }
 
 .about-img {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #b026ff;
-  box-shadow: 0 0 15px rgba(176, 38, 255, 0.4);
+  border: 2px solid #b026ff;
+  box-shadow: 0 0 20px rgba(176, 38, 255, 0.3);
 }
 
 /* PROJECTS Section */
 .projects {
-  background-color: rgba(20, 2, 40, 0.6);
+  background-color: rgba(14, 3, 31, 0.4);
 }
 
 .projects-grid {
@@ -299,38 +294,40 @@ h2 {
 
 .card-details-table {
   width: 100%;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
   border-collapse: collapse;
   margin-top: 15px;
 }
 
 .card-details-table td {
-  padding: 5px 0;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(176, 38, 255, 0.1);
 }
 
 .detail-label {
-  color: #b026ff;
-  font-weight: bold;
+  color: #c77dff;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
   text-transform: uppercase;
-  width: 100px;
+  width: 110px;
 }
 
 .project-card-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .project-card-tags span {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-family: 'Courier New', Courier, monospace;
-  color: #FFFFFF;
-  background-color: rgba(176, 38, 255, 0.2);
-  border: 1px solid #b026ff;
+  color: #e0aaff;
+  background-color: rgba(176, 38, 255, 0.08);
+  border: 1px solid rgba(176, 38, 255, 0.3);
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: 3px;
   text-transform: uppercase;
 }
 
@@ -344,16 +341,17 @@ h2 {
 }
 
 .skill-title-pink {
-  color: #b026ff !important;
+  color: #c77dff !important;
   font-family: 'Courier New', Courier, monospace !important;
-  font-size: 1.1rem !important;
-  margin-bottom: 25px !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 20px !important;
+  letter-spacing: 0.1em;
 }
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
-  .hero h1 { font-size: 3rem; }
-  .hero-subtitle { font-size: 1.4rem; }
-  h2 { font-size: 2.2rem; }
+  .hero h1 { font-size: 2.8rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+  h2 { font-size: 2.1rem; }
   .skills-grid { grid-template-columns: 1fr; }
 }
