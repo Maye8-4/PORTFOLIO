@@ -63,14 +63,14 @@ h2 {
    2. REUSABLE UI ELEMENTS
 ========================================= */
 
-/* Futuristic Magenta Outline Button */
+/* Futuristic Purple Outline Button */
 .btn-futuristic {
   display: inline-block;
   padding: 12px 30px;
   margin-top: 25px;
   color: #FFFFFF;
-  background-color: rgba(255, 0, 166, 0.1);
-  border: 2px solid #ff00a6;
+  background-color: rgba(176, 38, 255, 0.1);
+  border: 2px solid #b026ff;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -93,8 +93,8 @@ h2 {
 }
 
 .btn-futuristic:hover {
-  background-color: #ff00a6;
-  box-shadow: 0 0 15px rgba(255, 0, 166, 0.6);
+  background-color: #b026ff;
+  box-shadow: 0 0 15px rgba(176, 38, 255, 0.6);
 }
 
 .btn-futuristic:hover::after {
@@ -119,8 +119,8 @@ h2 {
   height: 60px;
   top: -2px;
   right: -2px;
-  border-top: 4px solid #ff00a6;
-  border-right: 4px solid #ff00a6;
+  border-top: 4px solid #b026ff;
+  border-right: 4px solid #b026ff;
   pointer-events: none;
   border-top-right-radius: 12px;
 }
@@ -132,8 +132,8 @@ h2 {
   height: 60px;
   bottom: -2px;
   left: -2px;
-  border-bottom: 4px solid #ff00a6;
-  border-left: 4px solid #ff00a6;
+  border-bottom: 4px solid #b026ff;
+  border-left: 4px solid #b026ff;
   pointer-events: none;
   border-bottom-left-radius: 12px;
 }
@@ -151,7 +151,7 @@ h2 {
 
 .card-futuristic h3 {
   font-size: 1.5rem;
-  color: #ff00a6;
+  color: #b026ff;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
@@ -174,12 +174,12 @@ h2 {
 
 .card-futuristic:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
-  border-color: #ff00a6;
+  box-shadow: 0 10px 30px rgba(176, 38, 255, 0.3);
+  border-color: #b026ff;
 }
 
 .card-futuristic:hover .card-inner-detail {
-  border-color: #ff00a6;
+  border-color: #b026ff;
 }
 
 /* =========================================
@@ -200,7 +200,7 @@ h2 {
 .hero-pattern-overlay {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background-image: linear-gradient(rgba(255, 0, 166, 0.05) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(176, 38, 255, 0.05) 1px, transparent 1px);
   background-size: 100% 20px;
   opacity: 0.5;
   z-index: -1;
@@ -221,7 +221,7 @@ h2 {
 }
 
 .hero h1 span {
-  color: #ff00a6;
+  color: #b026ff;
 }
 
 .hero-subtitle {
@@ -231,12 +231,19 @@ h2 {
   margin-bottom: 30px;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* Background light flares */
 .blue-flare-top {
   position: absolute;
   width: 400px; height: 400px;
   top: -100px; left: -100px;
-  background: radial-gradient(circle, rgba(0, 217, 255, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.25) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -245,9 +252,21 @@ h2 {
   position: absolute;
   width: 500px; height: 500px;
   bottom: 100px; right: -150px;
-  background: radial-gradient(circle, rgba(255, 0, 166, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(176, 38, 255, 0.2) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
+}
+
+/* ABOUT ME Section */
+.about-card {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-card .card-desc {
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 /* PROJECTS Section */
@@ -275,7 +294,7 @@ h2 {
 }
 
 .detail-label {
-  color: #ff00a6;
+  color: #b026ff;
   font-weight: bold;
   text-transform: uppercase;
   width: 100px;
@@ -292,8 +311,8 @@ h2 {
   font-size: 0.75rem;
   font-family: 'Courier New', Courier, monospace;
   color: #FFFFFF;
-  background-color: rgba(255, 0, 166, 0.2);
-  border: 1px solid #ff00a6;
+  background-color: rgba(176, 38, 255, 0.2);
+  border: 1px solid #b026ff;
   padding: 4px 10px;
   border-radius: 4px;
   text-transform: uppercase;
@@ -309,7 +328,7 @@ h2 {
 }
 
 .skill-title-pink {
-  color: #ff00a6 !important;
+  color: #b026ff !important;
   font-family: 'Courier New', Courier, monospace !important;
   font-size: 1.1rem !important;
   margin-bottom: 25px !important;
