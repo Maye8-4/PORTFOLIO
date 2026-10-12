@@ -1,5 +1,5 @@
 /* =========================================
-   1. GLOBAL RESET & TECH THEME
+   1. GLOBAL RESET & PROFESSIONAL MULTI-TONE THEME
 ========================================= */
 * {
   margin: 0;
@@ -14,13 +14,13 @@ html {
 
 body {
   color: #94a3b8;
-  background-color: #0b0f19;
+  background-color: #07090e;
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
 }
 
-/* Subtle tech grid background effect */
+/* Multi-tone ambient background glows & tech grid */
 body::before {
   content: "";
   position: fixed;
@@ -28,10 +28,25 @@ body::before {
   height: 100vh;
   top: 0;
   left: 0;
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(14, 165, 233, 0.08), transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(34, 197, 94, 0.06), transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(99, 102, 241, 0.05), transparent 40%);
+  pointer-events: none;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
   background-image: 
-    radial-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 197, 94, 0.015) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(34, 197, 94, 0.015) 1px, transparent 1px);
+    radial-gradient(rgba(14, 165, 233, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
   background-size: 40px 40px, 80px 80px, 80px 80px;
   pointer-events: none;
   z-index: -1;
@@ -71,7 +86,7 @@ h2 {
   left: 8%;
   right: 8%;
   padding: 14px 28px;
-  background-color: rgba(11, 15, 25, 0.85);
+  background-color: rgba(11, 15, 25, 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -80,7 +95,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .nav-brand {
@@ -99,9 +114,9 @@ h2 {
   justify-content: center;
   align-items: center;
   padding: 4px 10px;
-  background-color: rgba(34, 197, 94, 0.1);
-  color: #22c55e;
-  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(34, 197, 94, 0.15));
+  color: #38bdf8;
+  border: 1px solid rgba(14, 165, 233, 0.4);
   border-radius: 8px;
   font-size: 0.9rem;
 }
@@ -121,22 +136,23 @@ h2 {
 }
 
 .nav-links a:hover {
-  color: #22c55e;
+  color: #38bdf8;
 }
 
 .nav-contact-btn {
   padding: 9px 20px !important;
   background-color: transparent !important;
-  border: 1px solid rgba(34, 197, 94, 0.4) !important;
+  border: 1px solid rgba(14, 165, 233, 0.4) !important;
   border-radius: 20px !important;
-  color: #22c55e !important;
+  color: #38bdf8 !important;
   transition: all 0.25s ease !important;
 }
 
 .nav-contact-btn:hover {
-  background-color: #22c55e !important;
-  color: #0b0f19 !important;
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+  background: linear-gradient(135deg, #0ea5e9, #22c55e) !important;
+  color: #07090e !important;
+  border-color: transparent !important;
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
 }
 
 /* =========================================
@@ -146,26 +162,25 @@ h2 {
 .btn-futuristic {
   display: inline-block;
   padding: 13px 28px;
-  color: #0b0f19;
-  background-color: #22c55e;
-  border: 1px solid #22c55e;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0ea5e9, #22c55e);
+  border: 1px solid transparent;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.25s ease;
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.25);
 }
 
 .btn-futuristic:hover {
-  background-color: #16a34a;
-  border-color: #16a34a;
   transform: translateY(-2px);
-  box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
+  box-shadow: 0 6px 25px rgba(34, 197, 94, 0.4);
+  filter: brightness(1.1);
 }
 
 .card-futuristic {
-  background-color: rgba(18, 24, 38, 0.7);
+  background: linear-gradient(145deg, rgba(18, 24, 38, 0.75), rgba(11, 15, 25, 0.85));
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 30px;
@@ -176,7 +191,7 @@ h2 {
 .card-futuristic:hover {
   transform: translateY(-4px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-  border-color: rgba(34, 197, 94, 0.3);
+  border-color: rgba(14, 165, 233, 0.35);
 }
 
 .card-futuristic h3 {
@@ -216,7 +231,7 @@ h2 {
 }
 
 .hero h1 span {
-  background: linear-gradient(135deg, #22c55e, #06b6d4);
+  background: linear-gradient(135deg, #38bdf8, #22c55e, #818cf8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -235,11 +250,11 @@ h2 {
   flex-wrap: wrap;
 }
 
-/* ABOUT ME Section with Circular Picture & Terminal Badge */
+/* ABOUT ME Section with Circular Picture */
 .about-card {
   max-width: 850px;
   margin: 0 auto;
-  border-top: 2px solid #22c55e;
+  border-top: 2px solid #0ea5e9;
 }
 
 .about-container-grid {
@@ -255,8 +270,8 @@ h2 {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #22c55e;
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.25);
+  border: 2px solid #38bdf8;
+  box-shadow: 0 0 25px rgba(14, 165, 233, 0.3);
 }
 
 .about-profile-img {
@@ -291,7 +306,7 @@ h2 {
 }
 
 .detail-label {
-  color: #22c55e;
+  color: #38bdf8;
   font-family: monospace;
   font-weight: 600;
   width: 90px;
@@ -308,9 +323,9 @@ h2 {
   font-size: 0.75rem;
   font-family: monospace;
   font-weight: 500;
-  color: #22c55e;
-  background-color: rgba(34, 197, 94, 0.08);
-  border: 1px solid rgba(34, 197, 94, 0.25);
+  color: #38bdf8;
+  background-color: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.25);
   padding: 4px 12px;
   border-radius: 6px;
 }
@@ -335,10 +350,11 @@ h2 {
   max-width: 750px;
   margin: 0 auto;
   text-align: left;
-  background-color: rgba(18, 24, 38, 0.7);
+  background: linear-gradient(145deg, rgba(18, 24, 38, 0.75), rgba(11, 15, 25, 0.85));
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 50px;
+  border-top: 2px solid #22c55e;
 }
 
 .contact-tag {
@@ -371,20 +387,20 @@ h2 {
 
 .btn-contact-primary {
   padding: 13px 28px;
-  background-color: #22c55e;
-  color: #0b0f19;
+  background: linear-gradient(135deg, #0ea5e9, #22c55e);
+  color: #ffffff;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.25s ease;
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.25);
 }
 
 .btn-contact-primary:hover {
-  background-color: #16a34a;
+  filter: brightness(1.1);
   transform: translateY(-2px);
-  box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
+  box-shadow: 0 6px 25px rgba(34, 197, 94, 0.4);
 }
 
 .btn-contact-secondary {
@@ -401,7 +417,7 @@ h2 {
 
 .btn-contact-secondary:hover {
   background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(34, 197, 94, 0.4);
+  border-color: rgba(14, 165, 233, 0.4);
   transform: translateY(-2px);
 }
 
