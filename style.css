@@ -9,12 +9,11 @@
   --text-muted: #94a3b8;
   
   --primary-purple: #8b5cf6;
-  --elegant-lavender: #c4b5fd; /* Soft, cool silver-purple for high readability */
+  --elegant-lavender: #c4b5fd; /* Cool silver-purple */
   --accent-indigo: #6366f1;
-  --accent-slate: #cbd5e1;
   
-  --border-glow: rgba(139, 92, 246, 0.25);
-  --border-hover: rgba(196, 181, 253, 0.5);
+  --border-glow: rgba(139, 92, 246, 0.3);
+  --border-shine: rgba(216, 180, 254, 0.75);
 }
 
 * {
@@ -36,7 +35,7 @@ body {
   position: relative;
 }
 
-/* Subtle, cool-toned ambient glow and grid */
+/* Subtle ambient glow */
 body::before {
   content: "";
   position: fixed;
@@ -45,8 +44,8 @@ body::before {
   top: 0;
   left: 0;
   background: 
-    radial-gradient(circle at 10% 15%, rgba(139, 92, 246, 0.08), transparent 50%),
-    radial-gradient(circle at 90% 85%, rgba(99, 102, 241, 0.06), transparent 50%);
+    radial-gradient(circle at 10% 15%, rgba(139, 92, 246, 0.1), transparent 50%),
+    radial-gradient(circle at 90% 85%, rgba(99, 102, 241, 0.08), transparent 50%);
   pointer-events: none;
   z-index: -2;
 }
@@ -93,7 +92,34 @@ h2 {
 }
 
 /* =========================================
-   2. NAVIGATION BAR
+   2. SHINE & LIGHT ANIMATIONS
+========================================= */
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: inset 0 0 15px rgba(139, 92, 246, 0.15), 0 0 15px rgba(139, 92, 246, 0.2);
+    border-color: rgba(139, 92, 246, 0.35);
+  }
+  50% {
+    box-shadow: inset 0 0 22px rgba(196, 181, 253, 0.25), 0 0 25px rgba(139, 92, 246, 0.45);
+    border-color: rgba(196, 181, 253, 0.65);
+  }
+}
+
+@keyframes shimmerBorder {
+  0% {
+    border-color: rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    border-color: rgba(216, 180, 254, 0.7);
+  }
+  100% {
+    border-color: rgba(139, 92, 246, 0.3);
+  }
+}
+
+/* =========================================
+   3. NAVIGATION BAR
 ========================================= */
 .navbar {
   position: fixed;
@@ -110,7 +136,8 @@ h2 {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(139, 92, 246, 0.15);
+  animation: shimmerBorder 6s infinite ease-in-out;
 }
 
 .nav-brand {
@@ -130,9 +157,10 @@ h2 {
   padding: 4px 10px;
   background: rgba(139, 92, 246, 0.1) !important;
   color: var(--elegant-lavender) !important;
-  border: 1px solid rgba(139, 92, 246, 0.3) !important;
+  border: 1px solid rgba(139, 92, 246, 0.4) !important;
   border-radius: 8px;
   font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
 }
 
 .nav-links {
@@ -151,14 +179,16 @@ h2 {
 
 .nav-links a:hover {
   color: var(--elegant-lavender) !important;
+  text-shadow: 0 0 10px rgba(196, 181, 253, 0.5);
 }
 
 .nav-contact-btn {
   padding: 9px 20px !important;
   background-color: transparent !important;
-  border: 1px solid rgba(139, 92, 246, 0.4) !important;
+  border: 1px solid rgba(139, 92, 246, 0.5) !important;
   border-radius: 20px !important;
   color: var(--elegant-lavender) !important;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
   transition: all 0.25s ease !important;
 }
 
@@ -166,11 +196,11 @@ h2 {
   background: linear-gradient(135deg, var(--primary-purple), var(--accent-indigo)) !important;
   color: #ffffff !important;
   border-color: transparent !important;
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.6) !important;
 }
 
 /* =========================================
-   3. REUSABLE CARD & BUTTON STYLES
+   4. REUSABLE SHINNING CARDS & BUTTONS
 ========================================= */
 
 .btn-futuristic {
@@ -178,35 +208,60 @@ h2 {
   padding: 13px 28px;
   color: #ffffff !important;
   background: linear-gradient(135deg, var(--primary-purple), var(--accent-indigo)) !important;
-  border: 1px solid transparent !important;
+  border: 1px solid rgba(196, 181, 253, 0.4) !important;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .btn-futuristic:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
-  filter: brightness(1.1);
+  box-shadow: 0 6px 28px rgba(139, 92, 246, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+  filter: brightness(1.15);
 }
 
+/* Cards with edge lighting & subtle breathing shine */
 .card-futuristic {
   background: var(--bg-card) !important;
   border: 1px solid var(--border-glow) !important;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02), 0 8px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 15px rgba(139, 92, 246, 0.12), 0 8px 25px rgba(0, 0, 0, 0.5);
   border-radius: 16px;
   padding: 30px;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+/* Light edge border effect */
+.card-futuristic::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(216, 180, 254, 0.08),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: 0.75s ease;
+  pointer-events: none;
+}
+
+.card-futuristic:hover::after {
+  left: 150%;
 }
 
 .card-futuristic:hover {
   transform: translateY(-4px);
-  border-color: var(--border-hover) !important;
-  box-shadow: inset 0 0 0 1px rgba(139, 92, 246, 0.15), 0 12px 30px rgba(139, 92, 246, 0.2);
+  border-color: var(--border-shine) !important;
+  box-shadow: inset 0 0 20px rgba(196, 181, 253, 0.2), 0 12px 35px rgba(139, 92, 246, 0.35);
 }
 
 .card-futuristic h3 {
@@ -223,7 +278,7 @@ h2 {
 }
 
 /* =========================================
-   4. HERO & SECTION SPECIFIC STYLES
+   5. HERO & SECTION STYLES
 ========================================= */
 
 .hero {
@@ -246,13 +301,13 @@ h2 {
   line-height: 1.1;
 }
 
-/* ELEGANT, COOL, & READABLE NAME STYLE */
+/* Highly readable name with ambient purple glow */
 .hero h1 span {
   display: inline !important;
   color: var(--elegant-lavender) !important;
   background: none !important;
   -webkit-text-fill-color: var(--elegant-lavender) !important;
-  text-shadow: 0 0 25px rgba(196, 181, 253, 0.25);
+  text-shadow: 0 0 20px rgba(196, 181, 253, 0.35), 0 0 40px rgba(139, 92, 246, 0.25);
 }
 
 .hero-subtitle {
@@ -291,8 +346,8 @@ h2 {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid var(--primary-purple) !important;
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  border: 2px solid var(--elegant-lavender) !important;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.45);
 }
 
 .about-profile-img {
@@ -342,10 +397,11 @@ h2 {
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--elegant-lavender) !important;
-  background-color: rgba(139, 92, 246, 0.08) !important;
-  border: 1px solid rgba(139, 92, 246, 0.25) !important;
+  background-color: rgba(139, 92, 246, 0.1) !important;
+  border: 1px solid rgba(139, 92, 246, 0.3) !important;
   padding: 4px 12px;
   border-radius: 6px;
+  box-shadow: inset 0 0 8px rgba(139, 92, 246, 0.15);
 }
 
 .skills-grid {
@@ -361,15 +417,17 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* Glowing contact container */
 .contact-container {
   max-width: 100%;
   margin: 0;
   text-align: left;
   background: var(--bg-card) !important;
   border: 1px solid var(--border-glow) !important;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02), 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 20px rgba(139, 92, 246, 0.15), 0 10px 30px rgba(0, 0, 0, 0.5);
   border-radius: 16px;
   padding: 50px;
+  animation: pulseGlow 8s infinite ease-in-out;
 }
 
 .contact-tag {
@@ -411,30 +469,32 @@ h2 {
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .btn-contact-primary:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.15);
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 6px 28px rgba(139, 92, 246, 0.6);
 }
 
 .btn-contact-secondary {
   padding: 13px 28px;
   background-color: rgba(255, 255, 255, 0.02) !important;
   color: var(--text-main) !important;
-  border: 1px solid rgba(139, 92, 246, 0.3) !important;
+  border: 1px solid rgba(139, 92, 246, 0.4) !important;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
+  box-shadow: inset 0 0 10px rgba(139, 92, 246, 0.1);
   transition: all 0.25s ease;
 }
 
 .btn-contact-secondary:hover {
   background-color: rgba(255, 255, 255, 0.06) !important;
   border-color: var(--elegant-lavender) !important;
+  box-shadow: 0 0 15px rgba(196, 181, 253, 0.3);
   transform: translateY(-2px);
 }
 
