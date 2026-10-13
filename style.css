@@ -2,19 +2,20 @@
    1. GLOBAL RESET & PURPLE/BLACK THEME VARIABLES
 ========================================= */
 :root {
-  --bg-main: #050508;
-  --bg-card: rgba(16, 12, 24, 0.85);
-  --bg-nav: rgba(9, 9, 14, 0.85);
+  --bg-main: #06050b;
+  --bg-card: rgba(18, 14, 28, 0.85);
+  --bg-nav: rgba(12, 10, 20, 0.85);
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   
   --primary-purple: #a855f7;
-  --bright-purple: #c084fc;
+  --bright-purple: #d8b4fe; /* Ultra-readable vibrant light purple */
+  --accent-purple: #c084fc;
   --indigo-accent: #6366f1;
   --pink-accent: #f43f5e;
   
   --border-glow: rgba(168, 85, 247, 0.35);
-  --border-hover: rgba(192, 132, 252, 0.7);
+  --border-hover: rgba(216, 180, 254, 0.7);
 }
 
 * {
@@ -224,10 +225,9 @@ h2 {
 }
 
 /* =========================================
-   4. SECTION SPECIFIC STYLES
+   4. HERO & SECTION SPECIFIC STYLES
 ========================================= */
 
-/* HERO Section */
 .hero {
   min-height: auto;
   padding-top: 150px;
@@ -248,15 +248,16 @@ h2 {
   line-height: 1.1;
 }
 
-/* Gradient Text for Name Fix */
+/* 
+   HIGH-CONTRAST READABLE NAME STYLE:
+   Uses solid light-lavender with a soft purple neon glow to completely avoid background box glitches.
+*/
 .hero h1 span {
-  background: linear-gradient(135deg, var(--bright-purple), var(--pink-accent), var(--indigo-accent)) !important;
-  background-clip: text !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
   display: inline !important;
-  -webkit-box-decoration-break: clone !important;
-  box-decoration-break: clone !important;
+  color: var(--bright-purple) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--bright-purple) !important;
+  text-shadow: 0 0 20px rgba(216, 180, 254, 0.5), 0 0 35px rgba(168, 85, 247, 0.3);
 }
 
 .hero-subtitle {
@@ -273,7 +274,6 @@ h2 {
   flex-wrap: wrap;
 }
 
-/* ABOUT ME Section */
 .about {
   padding-top: 20px;
 }
@@ -311,7 +311,6 @@ h2 {
   flex-grow: 1;
 }
 
-/* PROJECTS Section */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -354,7 +353,6 @@ h2 {
   border-radius: 6px;
 }
 
-/* SKILLS Section */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -368,7 +366,6 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* CONTACT SECTION */
 .contact-container {
   max-width: 100%;
   margin: 0;
