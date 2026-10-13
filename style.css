@@ -227,6 +227,7 @@ h2 {
    4. SECTION SPECIFIC STYLES
 ========================================= */
 
+/* HERO Section */
 .hero {
   min-height: auto;
   padding-top: 150px;
@@ -247,10 +248,15 @@ h2 {
   line-height: 1.1;
 }
 
+/* Gradient Text for Name Fix */
 .hero h1 span {
   background: linear-gradient(135deg, var(--bright-purple), var(--pink-accent), var(--indigo-accent)) !important;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline !important;
+  -webkit-box-decoration-break: clone !important;
+  box-decoration-break: clone !important;
 }
 
 .hero-subtitle {
@@ -267,6 +273,7 @@ h2 {
   flex-wrap: wrap;
 }
 
+/* ABOUT ME Section */
 .about {
   padding-top: 20px;
 }
@@ -304,6 +311,7 @@ h2 {
   flex-grow: 1;
 }
 
+/* PROJECTS Section */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -346,6 +354,7 @@ h2 {
   border-radius: 6px;
 }
 
+/* SKILLS Section */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -359,6 +368,7 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* CONTACT SECTION */
 .contact-container {
   max-width: 100%;
   margin: 0;
@@ -436,6 +446,7 @@ h2 {
   transform: translateY(-2px);
 }
 
+/* Responsive adjustments */
 @media (max-width: 900px) {
   .navbar { left: 5%; right: 5%; }
   .hero { padding-left: 8%; text-align: center; align-items: center; padding-top: 120px; }
