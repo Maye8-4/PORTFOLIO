@@ -83,6 +83,10 @@ h2 {
   color: var(--text-main) !important;
 }
 
+h2 span {
+  color: var(--elegant-lavender) !important;
+}
+
 .section-label {
   color: var(--primary-purple) !important;
   font-size: 0.8rem;
@@ -231,7 +235,6 @@ h2 {
   filter: brightness(1.15);
 }
 
-/* Cards with edge lighting & subtle breathing shine */
 .card-futuristic {
   background: var(--bg-card) !important;
   border: 1px solid var(--border-glow) !important;
@@ -243,7 +246,6 @@ h2 {
   overflow: hidden;
 }
 
-/* Light edge border effect */
 .card-futuristic::after {
   content: "";
   position: absolute;
@@ -279,7 +281,7 @@ h2 {
 }
 
 .card-desc {
-  margin-top: 15px; 
+  margin-top: 8px; 
   color: var(--text-muted) !important;
   font-size: 1.05rem;
   line-height: 1.65;
@@ -294,7 +296,7 @@ h2 {
   padding-top: 150px;
   padding-bottom: 40px;
   display: flex;
-  flex-direction: row; /* places image next to text */
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   text-align: left;
@@ -308,15 +310,6 @@ h2 {
   font-weight: 800;
   color: var(--text-main) !important;
   line-height: 1.1;
-}
-
-/* Highly readable name with ambient purple glow */
-.hero h1 span {
-  display: inline !important;
-  color: var(--elegant-lavender) !important;
-  background: none !important;
-  -webkit-text-fill-color: var(--elegant-lavender) !important;
-  text-shadow: 0 0 20px rgba(196, 181, 253, 0.35), 0 0 40px rgba(139, 92, 246, 0.25);
 }
 
 .hero-subtitle {
@@ -360,13 +353,92 @@ h2 {
 }
 
 /* =========================================
-   6. PROJECTS SECTION - NEW LAYOUT
+   6. JOURNEY TIMELINE SECTION (MATCHING SCREENSHOT)
+========================================= */
+
+.journey {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.timeline-container {
+  position: relative;
+  margin-top: 40px;
+  padding-left: 20px;
+}
+
+/* Vertical Connecting Line */
+.timeline-line {
+  position: absolute;
+  left: 43px;
+  top: 25px;
+  bottom: 45px;
+  width: 2px;
+  background: rgba(139, 92, 246, 0.3);
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 45px;
+  z-index: 2;
+}
+
+/* Badge Nodes (01, 02, 03) */
+.timeline-badge {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--bg-main);
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  color: var(--elegant-lavender) !important;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-badge {
+  border-color: var(--elegant-lavender);
+  box-shadow: 0 0 20px rgba(196, 181, 253, 0.4);
+  transform: scale(1.05);
+}
+
+.timeline-content {
+  flex-grow: 1;
+}
+
+/* Small Category Tag */
+.timeline-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #34d399 !important; /* Cool Mint Green matching screenshot */
+  margin-bottom: 6px;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  color: var(--text-main) !important;
+  margin-bottom: 6px;
+}
+
+/* =========================================
+   7. PROJECTS SECTION
 ========================================= */
 
 .projects-layout {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 
 .project-card-main {
@@ -375,32 +447,10 @@ h2 {
   flex-direction: column;
 }
 
-.project-id-badge {
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  background: linear-gradient(135deg, var(--primary-purple), var(--accent-indigo));
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 30px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
-}
-
 .project-metadata-group {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   border-bottom: 1px solid rgba(139, 92, 246, 0.2);
-  padding-bottom: 15px;
-}
-
-.meta-label {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--elegant-lavender) !important;
-  letter-spacing: 0.15em;
-  margin-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .meta-type {
@@ -413,7 +463,7 @@ h2 {
 
 .project-card-content {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   align-items: flex-start;
 }
 
@@ -421,43 +471,9 @@ h2 {
   flex: 1;
 }
 
-.project-visual-container {
-  flex: 0 0 250px;
-  text-align: right;
-}
-
-.visual-scale-box,
-.visual-med-box {
-  background: var(--bg-card);
-  border: 1px solid rgba(139, 92, 246, 0.2);
-  border-radius: 12px;
-  padding: 20px;
-  display: inline-block;
-  text-align: left;
-  margin-top: 10px;
-}
-
-.med-time-visual {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--text-main) !important;
-  background: rgba(139, 92, 246, 0.1);
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 10px;
-}
-
 /* =========================================
-   7. TOOLKIT & TAGS (Updated)
+   8. TOOLKIT & TAGS
 ========================================= */
-
-.toolkit-icon {
-  font-size: 1.8rem;
-  color: var(--elegant-lavender) !important;
-  margin-bottom: 10px;
-  display: block;
-}
 
 .card-toolkit {
   background: var(--bg-card) !important;
@@ -476,27 +492,13 @@ h2 {
 .card-toolkit h3 {
   font-size: 1.2rem;
   margin-bottom: 8px;
-}
-
-.card-toolkit h3 {
   color: var(--text-main) !important;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Updated for better flow from image */
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-}
-
-.card-details-table td {
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-.detail-label {
-  color: var(--elegant-lavender) !important;
-  font-weight: 600;
-  width: 90px;
 }
 
 .project-card-tags {
@@ -517,18 +519,10 @@ h2 {
   box-shadow: inset 0 0 8px rgba(139, 92, 246, 0.15);
 }
 
-.skill-subtitle {
-  color: var(--elegant-lavender) !important;
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
 /* =========================================
-   8. CONTACT SECTION
+   9. CONTACT SECTION
 ========================================= */
 
-/* Glowing contact container */
 .contact-container {
   max-width: 100%;
   margin: 0;
@@ -610,48 +604,26 @@ h2 {
 }
 
 /* =========================================
-   9. RESPONSIVE ADJUSTMENTS
+   10. RESPONSIVE ADJUSTMENTS
 ========================================= */
 
 @media (max-width: 900px) {
   .navbar { left: 5%; right: 5%; }
-  .hero { flex-direction: column; padding-left: 8%; padding-right: 8%; text-align: center; align-items: center; padding-top: 120px; gap: 20px;}
+  .hero { flex-direction: column; padding-left: 8%; padding-right: 8%; text-align: center; align-items: center; padding-top: 120px; gap: 20px; }
   .hero h1 { font-size: 3rem; }
   .hero-subtitle { font-size: 1.1rem; }
   h2 { font-size: 2.1rem; text-align: center; }
   .section-subtitle { text-align: center; }
   .skills-grid { grid-template-columns: 1fr; }
   
-  .project-card-content {
-    flex-direction: column-reverse; /* text below visual on mobile */
-    gap: 20px;
-    align-items: center;
-  }
-  
-  .project-text, .project-visual-container {
-    text-align: center;
-    flex: 1;
-    width: 100%;
-  }
-  
-  .project-id-badge {
-    right: 15px;
-    top: -15px;
-  }
-  
-  .contact-container {
-    text-align: center;
-  }
-  .contact h2 {
-    text-align: center;
-  }
-  .contact-subtitle {
-    text-align: center;
-  }
-  .contact-tag {
-    text-align: center;
-  }
-  .contact-buttons {
-    justify-content: center;
-  }
+  .timeline-container { padding-left: 0; }
+  .timeline-line { left: 23px; }
+  .timeline-badge { width: 44px; height: 44px; }
+  .timeline-item { gap: 20px; }
+
+  .contact-container { text-align: center; }
+  .contact h2 { text-align: center; }
+  .contact-subtitle { text-align: center; }
+  .contact-tag { text-align: center; }
+  .contact-buttons { justify-content: center; }
 }
