@@ -335,14 +335,16 @@ h2 span {
   margin: 0;
 }
 
+/* Profile Picture Wrapper - Made Bigger */
 .hero-image-wrapper {
   flex-shrink: 0;
-  width: 220px;
-  height: 220px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid var(--elegant-lavender) !important;
-  box-shadow: 0 0 25px rgba(139, 92, 246, 0.45);
+  border: 3px solid var(--elegant-lavender) !important;
+  box-shadow: 0 0 35px rgba(139, 92, 246, 0.55), inset 0 0 20px rgba(196, 181, 253, 0.35);
+  animation: pulseGlow 6s infinite ease-in-out;
 }
 
 .hero-profile-img {
@@ -353,82 +355,31 @@ h2 span {
 }
 
 /* =========================================
-   6. JOURNEY TIMELINE SECTION (MATCHING SCREENSHOT)
+   6. JOURNEY BOXES GRID LAYOUT
 ========================================= */
 
-.journey {
-  padding-top: 40px;
-  padding-bottom: 60px;
-}
-
-.timeline-container {
-  position: relative;
-  margin-top: 40px;
-  padding-left: 20px;
-}
-
-/* Vertical Connecting Line */
-.timeline-line {
-  position: absolute;
-  left: 43px;
-  top: 25px;
-  bottom: 45px;
-  width: 2px;
-  background: rgba(139, 92, 246, 0.3);
-  z-index: 1;
-}
-
-.timeline-item {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-bottom: 45px;
-  z-index: 2;
+  margin-top: 20px;
 }
 
-/* Badge Nodes (01, 02, 03) */
-.timeline-badge {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: var(--bg-main);
-  border: 1px solid rgba(139, 92, 246, 0.5);
-  color: var(--elegant-lavender) !important;
-  font-size: 0.9rem;
-  font-weight: 700;
+.journey-box {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
-  transition: all 0.3s ease;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.timeline-item:hover .timeline-badge {
-  border-color: var(--elegant-lavender);
-  box-shadow: 0 0 20px rgba(196, 181, 253, 0.4);
-  transform: scale(1.05);
+.journey-box-header {
+  margin-bottom: 15px;
 }
 
-.timeline-content {
-  flex-grow: 1;
-}
-
-/* Small Category Tag */
-.timeline-tag {
-  display: inline-block;
+.journey-tag {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: #34d399 !important; /* Cool Mint Green matching screenshot */
-  margin-bottom: 6px;
-}
-
-.timeline-content h3 {
-  font-size: 1.5rem;
-  color: var(--text-main) !important;
-  margin-bottom: 6px;
+  color: #34d399 !important; /* Cool Mint Green */
 }
 
 /* =========================================
@@ -612,14 +563,10 @@ h2 span {
   .hero { flex-direction: column; padding-left: 8%; padding-right: 8%; text-align: center; align-items: center; padding-top: 120px; gap: 20px; }
   .hero h1 { font-size: 3rem; }
   .hero-subtitle { font-size: 1.1rem; }
+  .hero-image-wrapper { width: 200px; height: 200px; }
   h2 { font-size: 2.1rem; text-align: center; }
   .section-subtitle { text-align: center; }
-  .skills-grid { grid-template-columns: 1fr; }
-  
-  .timeline-container { padding-left: 0; }
-  .timeline-line { left: 23px; }
-  .timeline-badge { width: 44px; height: 44px; }
-  .timeline-item { gap: 20px; }
+  .skills-grid, .journey-grid { grid-template-columns: 1fr; }
 
   .contact-container { text-align: center; }
   .contact h2 { text-align: center; }
