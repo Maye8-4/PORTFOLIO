@@ -3,44 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mayette | Computer Engineering Portfolio</title>
-  
-  <!-- Google Fonts for modern typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Link to CSS -->
+  <title>Mayette | Computer Engineering Student</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- NAVIGATION BAR -->
-  <header class="navbar">
+  <nav class="navbar">
     <div class="nav-brand">
-      <span class="nav-logo">M</span> Mayette
+      <span class="nav-logo">M</span>
+      Mayette
     </div>
-    <nav class="nav-links">
+    <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#ideas">Ideas</a>
       <a href="#projects">Projects</a>
-      <a href="#contact" class="nav-contact-btn">Contact ↗</a>
-    </nav>
-  </header>
+      <a href="#contact" class="nav-contact-btn">Contact &nearr;</a>
+    </div>
+  </nav>
 
   <!-- HERO SECTION -->
   <section class="hero" id="home">
-    <h1>
-      Hi, I'm <br>
-      <span>Mayette</span><br>
-      <span>Mercurio!</span>
-    </h1>
-    <div class="hero-subtitle">Computer Engineering Student</div>
-    
-    <div class="hero-buttons">
-      <a href="#projects" class="btn-futuristic">Explore My Projects →</a>
-      <a href="#contact" class="btn-futuristic">Let's Connect ↗</a>
+    <div class="hero-container">
+      <div class="hero-text-content">
+        <h1>Hi, I'm <span>Mayette Mercurio!</span></h1>
+        <p class="hero-subtitle">Computer Engineering Student</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-futuristic">Explore My Projects &rarr;</a>
+          <a href="#contact" class="btn-futuristic">Let's Connect &nearr;</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <!-- Make sure the src matches your photo filename/path -->
+        <img src="profile.jpg" alt="Mayette Mercurio" class="hero-profile-img">
+      </div>
     </div>
   </section>
 
@@ -48,228 +45,81 @@
   <section class="about" id="about">
     <h2>About Me</h2>
     <div class="card-futuristic about-card">
-      <div class="about-container-grid">
-        
-        <!-- PROFILE PICTURE -->
-        <div class="about-image-wrapper">
-          <img src="mayetttttttte.jpg" alt="Mayette" class="about-profile-img">
-        </div>
-
-        <div class="about-text-content">
-          <p class="card-desc" style="margin-top: 0; text-align: left;">
-            I am an engineering student who is passionate about technology, innovation, and problem-solving. I enjoy learning new skills, exploring different technologies, and applying my knowledge to real-life situations. I am always willing to improve myself, work with others, and take on new challenges that will help me grow as a future engineer.
-          </p>
-
-          <div class="project-card-tags" style="justify-content: flex-start; margin-top: 20px;">
-            <span>Microcontrollers</span>
-            <span>Logic Design</span>
-            <span>Embedded Systems</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- IDEAS MADE REAL SECTION -->
-  <section class="projects" id="ideas">
-    <div class="contact-tag">03 / SELECTED PROJECTS</div>
-    <h2>Ideas made real<span>.</span></h2>
-    <p class="section-subtitle">A collection of engineering concepts, embedded systems, and web development projects.</p>
-
-    <div class="projects-grid">
-
-      <!-- PROJECT 1: VEROSCALE -->
-      <article class="card-futuristic">
-        <h3>VeroScale</h3>
-        
-        <table class="card-details-table">
-          <tr>
-            <td class="detail-label">Focus</td>
-            <td>IoT Concept</td>
-          </tr>
-          <tr>
-            <td class="detail-label">Status</td>
-            <td>Active v1.0</td>
-          </tr>
-        </table>
-
-        <p class="card-desc">
-          A smart food scale concept designed for gym enthusiasts. It combines weight measurement with selected food types to display estimated nutritional information[cite: 1].
-        </p>
-
-        <div class="project-card-tags">
-          <span>ESP32</span>
-          <span>HX711</span>
-          <span>Load Cell</span>
-          <span>TFT Display</span>
-        </div>
-      </article>
-
-      <!-- PROJECT 2: MEDI BOX -->
-      <article class="card-futuristic">
-        <h3>Medi Box</h3>
-
-        <table class="card-details-table">
-          <tr>
-            <td class="detail-label">Tech</td>
-            <td>Embedded C++</td>
-          </tr>
-          <tr>
-            <td class="detail-label">Status</td>
-            <td>Active v1.0</td>
-          </tr>
-        </table>
-        
-        <p class="card-desc">
-          An ESP32-based smart medical box concept intended to support medicine organization and reminders through an embedded control system[cite: 2].
-        </p>
-
-        <div class="project-card-tags">
-          <span>ESP32</span>
-          <span>Electronics</span>
-          <span>Embedded C++</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- FEATURED PROJECTS SECTION -->
-  <section class="projects" id="projects">
-    <h2>Featured Projects</h2>
-
-    <div class="projects-grid">
-
-      <!-- PROJECT 1: PROJECT NEXUS -->
-      <article class="card-futuristic">
-        <h3>Project Nexus</h3>
-        
-        <table class="card-details-table">
-          <tr>
-            <td class="detail-label">Focus</td>
-            <td>Coding Logic</td>
-          </tr>
-          <tr>
-            <td class="detail-label">Status</td>
-            <td>Active v1.0</td>
-          </tr>
-        </table>
-
-        <p class="card-desc">
-          An initiative dedicated to strengthening programming proficiency, algorithmic problem-solving, and efficient software development.
-        </p>
-
-        <div class="project-card-tags">
-          <span>Algorithms</span>
-          <span>Coding</span>
-          <span>Logic</span>
-        </div>
-      </article>
-
-      <!-- PROJECT 2: DIGITAL PORTFOLIO -->
-      <article class="card-futuristic">
-        <h3>Digital Portfolio</h3>
-
-        <table class="card-details-table">
-          <tr>
-            <td class="detail-label">Tech</td>
-            <td>HTML, CSS, JS</td>
-          </tr>
-          <tr>
-            <td class="detail-label">Status</td>
-            <td>Active v1.2</td>
-          </tr>
-        </table>
-        
-        <p class="card-desc">
-          Personal responsive website showcasing engineering growth, coding logic, and technical development.
-        </p>
-
-        <div class="project-card-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-      </article>
-
-      <!-- PROJECT 3: FUTURE PROJECTS -->
-      <article class="card-futuristic">
-        <h3>Future Projects</h3>
-
-        <table class="card-details-table">
-          <tr>
-            <td class="detail-label">Area</td>
-            <td>Advanced Tech</td>
-          </tr>
-          <tr>
-            <td class="detail-label">Status</td>
-            <td>Planning</td>
-          </tr>
-        </table>
-        
-        <p class="card-desc">
-          Upcoming research and development initiatives focusing on smart systems, prototyping, and practical real-world solutions.
-        </p>
-
-        <div class="project-card-tags">
-          <span>IoT</span>
-          <span>Prototypes</span>
-          <span>Innovation</span>
-        </div>
-      </article>
-
+      <p class="card-desc">
+        I am an engineering student who is passionate about technology, innovation, and problem-solving. I enjoy learning new skills, exploring different technologies, and applying my knowledge to real-life situations. I am always willing to improve myself, work with others, and take on new challenges.
+      </p>
     </div>
   </section>
 
   <!-- SKILLS SECTION -->
   <section class="skills" id="skills">
-    <h2>Skills & Interests</h2>
+    <h2>Skills & Capabilities</h2>
+    <p class="section-subtitle">A quick overview of my technical abilities and fields of focus.</p>
 
     <div class="skills-grid">
-      
-      <!-- SKILL 1 -->
-      <div class="card-futuristic skill-card">
-        <h3>Programming</h3>
-        <p class="skill-subtitle">Code & Algorithms</p>
-        <p class="card-desc">
-          Developing efficient software logic, low-level programming, and data structures.
-        </p>
+      <div class="card-futuristic">
+        <h3>Technical Skills</h3>
+        <p class="skill-subtitle">Languages & Tools</p>
+        <div class="project-card-tags">
+          <span>HTML & CSS</span>
+          <span>JavaScript</span>
+          <span>C++</span>
+          <span>Python</span>
+          <span>Git & GitHub</span>
+        </div>
       </div>
 
-      <!-- SKILL 2 -->
-      <div class="card-futuristic skill-card">
-        <h3>Hardware Design</h3>
-        <p class="skill-subtitle">Circuits & Systems</p>
-        <p class="card-desc">
-          Understanding digital logic, microcontrollers, and electronic architecture.
-        </p>
+      <div class="card-futuristic">
+        <h3>Hardware & Systems</h3>
+        <p class="skill-subtitle">Engineering Concepts</p>
+        <div class="project-card-tags">
+          <span>Microcontrollers</span>
+          <span>Circuit Design</span>
+          <span>Embedded Systems</span>
+          <span>Logic Gates</span>
+        </div>
       </div>
 
-      <!-- SKILL 3 -->
-      <div class="card-futuristic skill-card">
-        <h3>Innovation</h3>
-        <p class="skill-subtitle">Creative Solutions</p>
-        <p class="card-desc">
-          Building unique, functional setups merging physical circuits with code.
-        </p>
+      <div class="card-futuristic">
+        <h3>Soft Skills</h3>
+        <p class="skill-subtitle">Professional Strengths</p>
+        <div class="project-card-tags">
+          <span>Problem Solving</span>
+          <span>Team Collaboration</span>
+          <span>Adaptability</span>
+          <span>Time Management</span>
+        </div>
       </div>
+    </div>
+  </section>
 
+  <!-- PROJECTS SECTION -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <p class="section-subtitle">Some of the works and applications I've developed.</p>
+
+    <div class="projects-grid">
+      <div class="card-futuristic">
+        <h3>Portfolio Website</h3>
+        <p class="card-desc">A responsive personal portfolio featuring custom neon glow styling and midnight aesthetics.</p>
+        <div class="project-card-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>GitHub Pages</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT SECTION -->
   <section class="contact" id="contact">
     <div class="contact-container">
-      <div class="contact-tag">05 / GET IN TOUCH</div>
-      <h2>Have a project or opportunity in mind?</h2>
-      <p class="contact-subtitle">I'm open to connecting about software, IT, and engineering projects.</p>
-
+      <div class="contact-tag">GET IN TOUCH</div>
+      <h2>Let's Build Something Together</h2>
+      <p class="contact-subtitle">Feel free to reach out for collaborations or just a friendly chat!</p>
       <div class="contact-buttons">
-        <!-- Direct Email Link -->
-        <a href="mailto:mayettemercurio9@gmail.com" class="btn-contact-primary">Email me ↗</a>
-        <!-- Correct Direct GitHub Link -->
-        <a href="https://github.com/Maye8-4" target="_blank" rel="noopener noreferrer" class="btn-contact-secondary">GitHub profile ↗</a>
+        <a href="mailto:your-email@example.com" class="btn-contact-primary">Send Email &nearr;</a>
+        <a href="https://github.com/maye8-4" target="_blank" class="btn-contact-secondary">GitHub Profile</a>
       </div>
     </div>
   </section>
