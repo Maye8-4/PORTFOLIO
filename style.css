@@ -507,7 +507,7 @@ h2 span {
 }
 
 /* =========================================
-   9. CONTACT SECTION & QR CODE
+   9. CONTACT SECTION
 ========================================= */
 
 .contact-container {
@@ -520,17 +520,6 @@ h2 span {
   border-radius: 16px;
   padding: 50px;
   animation: pulseGlow 8s infinite ease-in-out;
-}
-
-.contact-content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
-
-.contact-main-info {
-  flex: 1;
 }
 
 .contact-tag {
@@ -601,43 +590,6 @@ h2 span {
   transform: translateY(-2px);
 }
 
-/* Styled QR Code Box */
-.qr-code-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 16px;
-  background: rgba(8, 7, 14, 0.8);
-  border: 1px solid var(--border-glow);
-  border-radius: 14px;
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-}
-
-.qr-img-frame {
-  width: 130px;
-  height: 130px;
-  background: #ffffff;
-  padding: 8px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.qr-code-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.qr-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--elegant-lavender);
-  letter-spacing: 0.05em;
-}
-
 /* Back To Top Floating Button */
 .back-to-top-btn {
   position: fixed;
@@ -682,7 +634,6 @@ h2 span {
   .skills-grid, .journey-grid { grid-template-columns: 1fr; }
 
   .contact-container { text-align: center; }
-  .contact-content-wrapper { flex-direction: column; gap: 30px; }
   .contact h2 { text-align: center; }
   .contact-subtitle { text-align: center; }
   .contact-tag { text-align: center; }
