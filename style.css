@@ -2,17 +2,17 @@
    1. GLOBAL RESET & ELEGANT MIDNIGHT THEME
 ========================================= */
 :root {
-  --bg-main: #030305;
-  --bg-card: rgba(13, 11, 20, 0.9);
+  --bg-main: #05030a;
+  --bg-card: rgba(13, 11, 20, 0.88);
   --bg-nav: rgba(8, 7, 14, 0.85);
   --text-main: #f1f5f9;
   --text-muted: #94a3b8;
   
-  --primary-purple: #8b5cf6;
+  --primary-purple: #a855f7;
   --elegant-lavender: #c4b5fd; /* Cool silver-purple */
   --accent-indigo: #6366f1;
   
-  --border-glow: rgba(139, 92, 246, 0.4);
+  --border-glow: rgba(168, 85, 247, 0.4);
   --border-shine: rgba(216, 180, 254, 0.85);
 }
 
@@ -20,7 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Baskerville Old Face', Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  font-family: 'Baskerville Old Face', Baskerville, 'Hoefler Text', Garamond, 'Times New Roman', serif;
 }
 
 html {
@@ -35,7 +35,7 @@ body {
   position: relative;
 }
 
-/* Subtle ambient glow */
+/* Ambient Radial Glow & HUD Tech Overlay */
 body::before {
   content: "";
   position: fixed;
@@ -44,12 +44,14 @@ body::before {
   top: 0;
   left: 0;
   background: 
-    radial-gradient(circle at 10% 15%, rgba(139, 92, 246, 0.15), transparent 50%),
-    radial-gradient(circle at 90% 85%, rgba(99, 102, 241, 0.12), transparent 50%);
+    radial-gradient(circle at 90% 10%, rgba(168, 85, 247, 0.22), transparent 45%),
+    radial-gradient(circle at 10% 80%, rgba(139, 92, 246, 0.2), transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(15, 10, 28, 0.5), #030206 90%);
   pointer-events: none;
-  z-index: -2;
+  z-index: -3;
 }
 
+/* Cyber Tech Grid Background */
 body::after {
   content: "";
   position: fixed;
@@ -58,12 +60,12 @@ body::after {
   top: 0;
   left: 0;
   background-image: 
-    radial-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
-  background-size: 40px 40px, 80px 80px, 80px 80px;
+    linear-gradient(rgba(168, 85, 247, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(196, 181, 253, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 25px 25px;
   pointer-events: none;
-  z-index: -1;
+  z-index: -2;
 }
 
 section {
@@ -105,8 +107,40 @@ h2 span {
 }
 
 /* =========================================
-   2. SHINE & LIGHT ANIMATIONS
+   2. BACKGROUND GEARS ANIMATIONS
 ========================================= */
+
+.tech-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0.35;
+}
+
+@keyframes spinClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinCounterClockwise {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.gear-spin-cw {
+  transform-origin: center;
+  animation: spinClockwise 35s linear infinite;
+}
+
+.gear-spin-ccw {
+  transform-origin: center;
+  animation: spinCounterClockwise 25s linear infinite;
+}
 
 @keyframes pulseGlow {
   0%, 100% {
