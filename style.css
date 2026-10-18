@@ -44,8 +44,8 @@ body::before {
   top: 0;
   left: 0;
   background: 
-    radial-gradient(circle at 10% 15%, rgba(139, 92, 246, 0.1), transparent 50%),
-    radial-gradient(circle at 90% 85%, rgba(99, 102, 241, 0.08), transparent 50%);
+    radial-gradient(circle at 10% 15%, rgba(139, 92, 246, 0.12), transparent 50%),
+    radial-gradient(circle at 90% 85%, rgba(99, 102, 241, 0.1), transparent 50%);
   pointer-events: none;
   z-index: -2;
 }
@@ -109,12 +109,12 @@ h2 span {
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: inset 0 0 15px rgba(139, 92, 246, 0.15), 0 0 15px rgba(139, 92, 246, 0.2);
-    border-color: rgba(139, 92, 246, 0.35);
+    box-shadow: inset 0 0 15px rgba(139, 92, 246, 0.15), 0 0 25px rgba(139, 92, 246, 0.25);
+    border-color: rgba(139, 92, 246, 0.45);
   }
   50% {
-    box-shadow: inset 0 0 22px rgba(196, 181, 253, 0.25), 0 0 25px rgba(139, 92, 246, 0.45);
-    border-color: rgba(196, 181, 253, 0.65);
+    box-shadow: inset 0 0 25px rgba(196, 181, 253, 0.3), 0 0 40px rgba(139, 92, 246, 0.55);
+    border-color: rgba(196, 181, 253, 0.85);
   }
 }
 
@@ -335,22 +335,31 @@ h2 span {
   margin: 0;
 }
 
-/* Profile Picture Wrapper - Made Bigger */
+/* Profile Picture Wrapper - Made Bigger & Styled as Box Card */
 .hero-image-wrapper {
   flex-shrink: 0;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  border-radius: 20px;
   overflow: hidden;
-  border: 3px solid var(--elegant-lavender) !important;
-  box-shadow: 0 0 35px rgba(139, 92, 246, 0.55), inset 0 0 20px rgba(196, 181, 253, 0.35);
+  padding: 10px;
+  background: var(--bg-card);
+  border: 2px solid var(--elegant-lavender) !important;
+  box-shadow: 0 0 35px rgba(139, 92, 246, 0.45), inset 0 0 20px rgba(196, 181, 253, 0.25);
   animation: pulseGlow 6s infinite ease-in-out;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hero-image-wrapper:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 45px rgba(196, 181, 253, 0.65), inset 0 0 25px rgba(139, 92, 246, 0.4);
 }
 
 .hero-profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 12px;
   display: block;
 }
 
@@ -563,7 +572,7 @@ h2 span {
   .hero { flex-direction: column; padding-left: 8%; padding-right: 8%; text-align: center; align-items: center; padding-top: 120px; gap: 20px; }
   .hero h1 { font-size: 3rem; }
   .hero-subtitle { font-size: 1.1rem; }
-  .hero-image-wrapper { width: 200px; height: 200px; }
+  .hero-image-wrapper { width: 240px; height: 240px; }
   h2 { font-size: 2.1rem; text-align: center; }
   .section-subtitle { text-align: center; }
   .skills-grid, .journey-grid { grid-template-columns: 1fr; }
