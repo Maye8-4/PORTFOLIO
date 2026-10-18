@@ -282,15 +282,23 @@ h2 {
 ========================================= */
 
 .hero {
-  min-height: auto;
+  min-height: 85vh;
   padding-top: 150px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  padding-left: 12%;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+
+.hero-text-content {
+  flex: 1;
 }
 
 .hero h1 {
@@ -324,41 +332,34 @@ h2 {
   flex-wrap: wrap;
 }
 
-.about {
-  padding-top: 20px;
-}
-
-.about-card {
-  max-width: 100%;
-  margin: 0;
-}
-
-.about-container-grid {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  text-align: left;
-}
-
-.about-image-wrapper {
+/* Hero Profile Picture Container */
+.hero-image-wrapper {
   flex-shrink: 0;
-  width: 150px;
-  height: 150px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid var(--elegant-lavender) !important;
-  box-shadow: 0 0 25px rgba(139, 92, 246, 0.45);
+  border: 3px solid var(--elegant-lavender) !important;
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), inset 0 0 15px rgba(196, 181, 253, 0.3);
+  animation: pulseGlow 6s infinite ease-in-out;
 }
 
-.about-profile-img {
+.hero-profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.about-text-content {
-  flex-grow: 1;
+/* Standalone About Me Section */
+.about {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.about-card {
+  max-width: 100%;
+  margin: 0;
 }
 
 .projects-grid {
@@ -501,37 +502,25 @@ h2 {
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .navbar { left: 5%; right: 5%; }
-  .hero { padding-left: 8%; text-align: center; align-items: center; padding-top: 120px; }
+  
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+  
   .hero h1 { font-size: 3rem; }
-  .hero-subtitle { font-size: 1.1rem; }
+  .hero-subtitle { font-size: 1.1rem; margin-left: auto; margin-right: auto; }
+  .hero-buttons { justify-content: center; }
+  .hero-image-wrapper { width: 170px; height: 170px; }
+
   h2 { font-size: 2.1rem; text-align: center; }
   .section-subtitle { text-align: center; }
   .skills-grid { grid-template-columns: 1fr; }
   
-  .about-container-grid {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .about-text-content .project-card-tags {
-    justify-content: center !important;
-  }
-  .about-text-content .card-desc {
-    text-align: center !important;
-  }
-  .contact-container {
-    text-align: center;
-  }
-  .contact h2 {
-    text-align: center;
-  }
-  .contact-subtitle {
-    text-align: center;
-  }
-  .contact-tag {
-    text-align: center;
-  }
-  .contact-buttons {
-    justify-content: center;
-  }
+  .contact-container { text-align: center; }
+  .contact h2 { text-align: center; }
+  .contact-subtitle { text-align: center; }
+  .contact-tag { text-align: center; }
+  .contact-buttons { justify-content: center; }
 }
