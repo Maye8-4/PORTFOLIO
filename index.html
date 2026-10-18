@@ -17,7 +17,6 @@
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#ideas">Ideas</a>
       <a href="#projects">Projects</a>
       <a href="#contact" class="nav-contact-btn">Contact &nearr;</a>
     </div>
@@ -48,61 +47,133 @@
     </div>
   </section>
 
-  <!-- SKILLS SECTION -->
+  <!-- SKILLS SECTION (Updated with reference image data) -->
   <section class="skills" id="skills">
-    <h2>Skills & Capabilities</h2>
-    <p class="section-subtitle">A quick overview of my technical abilities and fields of focus.</p>
+    <p class="section-label">02 / SKILLS</p>
+    <h2>My technical toolkit.</h2>
+    <p class="section-subtitle">Technologies and areas I use or am developing through coursework and project experience.</p>
 
     <div class="skills-grid">
-      <div class="card-futuristic">
-        <h3>Technical Skills</h3>
-        <p class="skill-subtitle">Languages & Tools</p>
+      <div class="card-toolkit">
+        <div class="toolkit-icon">&lt;/&gt;</div>
+        <h3>Programming</h3>
+        <p class="card-desc">Developing logic, functions, and interactive applications.</p>
         <div class="project-card-tags">
-          <span>HTML & CSS</span>
+          <span>C / C++</span>
           <span>JavaScript</span>
-          <span>C++</span>
-          <span>Python</span>
-          <span>Git & GitHub</span>
+          <span>HTML</span>
+          <span>CSS</span>
         </div>
       </div>
 
-      <div class="card-futuristic">
-        <h3>Hardware & Systems</h3>
-        <p class="skill-subtitle">Engineering Concepts</p>
+      <div class="card-toolkit">
+        <div class="toolkit-icon">&#9003;</div>
+        <h3>Embedded Systems</h3>
+        <p class="card-desc">Connecting microcontrollers, sensors, and electronic components.</p>
         <div class="project-card-tags">
-          <span>Microcontrollers</span>
+          <span>ESP32</span>
+          <span>Arduino</span>
+          <span>Sensors</span>
+          <span>C/C++</span>
+        </div>
+      </div>
+
+      <div class="card-toolkit">
+        <div class="toolkit-icon">&#9638;</div>
+        <h3>Web Development</h3>
+        <p class="card-desc">Creating responsive interfaces and browser-based experiences.</p>
+        <div class="project-card-tags">
+          <span>Responsive UI</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+
+      <div class="card-toolkit">
+        <div class="toolkit-icon">&#8984;</div>
+        <h3>Engineering Tools</h3>
+        <p class="card-desc">Exploring tools for circuit design, development, and technical work.</p>
+        <div class="project-card-tags">
+          <span>VS Code</span>
+          <span>GitHub</span>
+          <span>AutoCAD</span>
           <span>Circuit Design</span>
-          <span>Embedded Systems</span>
-          <span>Logic Gates</span>
-        </div>
-      </div>
-
-      <div class="card-futuristic">
-        <h3>Soft Skills</h3>
-        <p class="skill-subtitle">Professional Strengths</p>
-        <div class="project-card-tags">
-          <span>Problem Solving</span>
-          <span>Team Collaboration</span>
-          <span>Adaptability</span>
-          <span>Time Management</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS SECTION -->
+  <!-- PROJECTS SECTION (New Layout and New Content) -->
   <section class="projects" id="projects">
-    <h2>Projects</h2>
-    <p class="section-subtitle">Some of the works and applications I've developed.</p>
+    <p class="section-label">03 / SELECTED PROJECTS</p>
+    <h2>Ideas made real.</h2>
+    <p class="section-subtitle">A collection of engineering concepts, embedded systems, and web development projects.</p>
 
-    <div class="projects-grid">
-      <div class="card-futuristic">
-        <h3>Portfolio Website</h3>
-        <p class="card-desc">A responsive personal portfolio featuring custom neon glow styling and midnight aesthetics.</p>
-        <div class="project-card-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>GitHub Pages</span>
+    <div class="projects-layout">
+      <!-- PROJECT 01: VeroScale -->
+      <div class="project-card-main card-futuristic">
+        <div class="project-id-badge">01 / 04</div>
+        <div class="project-card-inner">
+          <div class="project-metadata-group">
+            <span class="meta-label">PROJECT_001</span>
+            <h3>VeroScale</h3>
+            <span class="meta-type">EMBEDDED SYSTEMS · IOT CONCEPT</span>
+          </div>
+          
+          <div class="project-card-content">
+            <div class="project-text">
+              <p class="card-desc">A smart food scale concept designed for gym enthusiasts. It combines weight measurement with selected food types to display estimated nutritional information.</p>
+              <div class="project-card-tags">
+                <span>ESP32</span>
+                <span>HX711</span>
+                <span>Load Cell</span>
+                <span>TFT Display</span>
+              </div>
+            </div>
+            
+            <div class="project-visual-container">
+              <p class="skill-subtitle">NUTRITION TRACKER</p>
+              <div class="visual-scale-box card-toolkit">
+                <div class="meta-type">EMBEDDED SYSTEM</div>
+                <p>Weight: <strong>250g</strong></p>
+                <p>Calories: <strong>325 kcal</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 02: Medi Box -->
+      <div class="project-card-main card-futuristic">
+        <div class="project-id-badge">02 / 04</div>
+        <div class="project-card-inner">
+          <div class="project-metadata-group">
+            <span class="meta-label">PROJECT_002</span>
+            <h3>Medi Box</h3>
+            <span class="meta-type">EMBEDDED SYSTEMS</span>
+          </div>
+          
+          <div class="project-card-content">
+            <div class="project-text">
+              <p class="card-desc">An ESP32-based smart medical box concept intended to support medicine organization and reminders through an embedded control system.</p>
+              <div class="project-card-tags">
+                <span>ESP32</span>
+                <span>Electronics</span>
+                <span>Embedded C++</span>
+              </div>
+            </div>
+            
+            <div class="project-visual-container">
+              <p class="skill-subtitle">MEDICATION REMINDER</p>
+              <div class="visual-med-box card-toolkit">
+                <div class="meta-type">SMART DEVICE +</div>
+                <div class="med-time-visual">
+                  08:00
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -113,9 +184,9 @@
     <div class="contact-container">
       <div class="contact-tag">GET IN TOUCH</div>
       <h2>Let's Build Something Together</h2>
-      <p class="contact-subtitle">Feel free to reach out for collaborations or just a friendly chat!</p>
+      <p class="contact-subtitle">Feel free to reach out for collaborations, inquiries, or just a friendly chat!</p>
       <div class="contact-buttons">
-        <a href="mailto:your-email@example.com" class="btn-contact-primary">Send Email &nearr;</a>
+        <a href="mailto:mayettemercurio@gmail.com" class="btn-contact-primary">Send Email &nearr;</a>
         <a href="https://github.com/maye8-4" target="_blank" class="btn-contact-secondary">GitHub Profile</a>
       </div>
     </div>
