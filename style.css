@@ -12,8 +12,8 @@
   --elegant-lavender: #c4b5fd; /* Cool silver-purple */
   --accent-indigo: #6366f1;
   
-  --border-glow: rgba(139, 92, 246, 0.3);
-  --border-shine: rgba(216, 180, 254, 0.75);
+  --border-glow: rgba(139, 92, 246, 0.4);
+  --border-shine: rgba(216, 180, 254, 0.85);
 }
 
 * {
@@ -35,7 +35,7 @@ body {
   position: relative;
 }
 
-/* Subtle ambient glow */
+/* Subtle ambient glow background */
 body::before {
   content: "";
   position: fixed;
@@ -44,8 +44,8 @@ body::before {
   top: 0;
   left: 0;
   background: 
-    radial-gradient(circle at 10% 15%, rgba(139, 92, 246, 0.12), transparent 50%),
-    radial-gradient(circle at 90% 85%, rgba(99, 102, 241, 0.1), transparent 50%);
+    radial-gradient(circle at 10% 15%, rgba(139, 92, 246, 0.15), transparent 50%),
+    radial-gradient(circle at 90% 85%, rgba(99, 102, 241, 0.12), transparent 50%);
   pointer-events: none;
   z-index: -2;
 }
@@ -58,7 +58,7 @@ body::after {
   top: 0;
   left: 0;
   background-image: 
-    radial-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+    radial-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
     linear-gradient(0deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
   background-size: 40px 40px, 80px 80px, 80px 80px;
@@ -109,24 +109,24 @@ h2 span {
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: inset 0 0 15px rgba(139, 92, 246, 0.15), 0 0 25px rgba(139, 92, 246, 0.25);
-    border-color: rgba(139, 92, 246, 0.45);
+    box-shadow: inset 0 0 18px rgba(139, 92, 246, 0.2), 0 0 25px rgba(139, 92, 246, 0.3);
+    border-color: rgba(139, 92, 246, 0.5);
   }
   50% {
-    box-shadow: inset 0 0 25px rgba(196, 181, 253, 0.3), 0 0 40px rgba(139, 92, 246, 0.55);
-    border-color: rgba(196, 181, 253, 0.85);
+    box-shadow: inset 0 0 28px rgba(196, 181, 253, 0.35), 0 0 45px rgba(139, 92, 246, 0.6);
+    border-color: rgba(196, 181, 253, 0.9);
   }
 }
 
 @keyframes shimmerBorder {
   0% {
-    border-color: rgba(139, 92, 246, 0.3);
+    border-color: rgba(139, 92, 246, 0.4);
   }
   50% {
-    border-color: rgba(216, 180, 254, 0.7);
+    border-color: rgba(216, 180, 254, 0.85);
   }
   100% {
-    border-color: rgba(139, 92, 246, 0.3);
+    border-color: rgba(139, 92, 246, 0.4);
   }
 }
 
@@ -148,7 +148,7 @@ h2 span {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(139, 92, 246, 0.25);
   animation: shimmerBorder 6s infinite ease-in-out;
 }
 
@@ -167,12 +167,12 @@ h2 span {
   justify-content: center;
   align-items: center;
   padding: 4px 10px;
-  background: rgba(139, 92, 246, 0.1) !important;
+  background: rgba(139, 92, 246, 0.15) !important;
   color: var(--elegant-lavender) !important;
-  border: 1px solid rgba(139, 92, 246, 0.4) !important;
+  border: 1px solid rgba(139, 92, 246, 0.5) !important;
   border-radius: 8px;
   font-size: 0.9rem;
-  box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.3);
 }
 
 .nav-links {
@@ -191,16 +191,16 @@ h2 span {
 
 .nav-links a:hover {
   color: var(--elegant-lavender) !important;
-  text-shadow: 0 0 10px rgba(196, 181, 253, 0.5);
+  text-shadow: 0 0 10px rgba(196, 181, 253, 0.6);
 }
 
 .nav-contact-btn {
   padding: 9px 20px !important;
   background-color: transparent !important;
-  border: 1px solid rgba(139, 92, 246, 0.5) !important;
+  border: 1px solid rgba(139, 92, 246, 0.6) !important;
   border-radius: 20px !important;
   color: var(--elegant-lavender) !important;
-  box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
   transition: all 0.25s ease !important;
 }
 
@@ -208,11 +208,11 @@ h2 span {
   background: linear-gradient(135deg, var(--primary-purple), var(--accent-indigo)) !important;
   color: #ffffff !important;
   border-color: transparent !important;
-  box-shadow: 0 0 25px rgba(139, 92, 246, 0.6) !important;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.7) !important;
 }
 
 /* =========================================
-   4. REUSABLE SHINNING CARDS & BUTTONS
+   4. REUSABLE GLOWING CARDS & BUTTONS
 ========================================= */
 
 .btn-futuristic {
@@ -226,19 +226,20 @@ h2 span {
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .btn-futuristic:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(139, 92, 246, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 30px rgba(139, 92, 246, 0.7), inset 0 1px 2px rgba(255, 255, 255, 0.5);
   filter: brightness(1.15);
 }
 
+/* ALL CARDS MADE GLOWING */
 .card-futuristic {
   background: var(--bg-card) !important;
   border: 1px solid var(--border-glow) !important;
-  box-shadow: inset 0 0 15px rgba(139, 92, 246, 0.12), 0 8px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 20px rgba(139, 92, 246, 0.18), 0 0 25px rgba(139, 92, 246, 0.25);
   border-radius: 16px;
   padding: 30px;
   position: relative;
@@ -256,7 +257,7 @@ h2 span {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(216, 180, 254, 0.08),
+    rgba(216, 180, 254, 0.12),
     transparent
   );
   transform: skewX(-25deg);
@@ -271,7 +272,7 @@ h2 span {
 .card-futuristic:hover {
   transform: translateY(-4px);
   border-color: var(--border-shine) !important;
-  box-shadow: inset 0 0 20px rgba(196, 181, 253, 0.2), 0 12px 35px rgba(139, 92, 246, 0.35);
+  box-shadow: inset 0 0 25px rgba(196, 181, 253, 0.3), 0 0 35px rgba(139, 92, 246, 0.5);
 }
 
 .card-futuristic h3 {
@@ -335,7 +336,7 @@ h2 span {
   margin: 0;
 }
 
-/* Profile Picture Wrapper - Made Bigger & Styled as Box Card */
+/* Profile Picture Wrapper - Boxed, Bigger & Glowing */
 .hero-image-wrapper {
   flex-shrink: 0;
   width: 320px;
@@ -345,14 +346,14 @@ h2 span {
   padding: 10px;
   background: var(--bg-card);
   border: 2px solid var(--elegant-lavender) !important;
-  box-shadow: 0 0 35px rgba(139, 92, 246, 0.45), inset 0 0 20px rgba(196, 181, 253, 0.25);
+  box-shadow: 0 0 35px rgba(139, 92, 246, 0.5), inset 0 0 20px rgba(196, 181, 253, 0.3);
   animation: pulseGlow 6s infinite ease-in-out;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .hero-image-wrapper:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 0 45px rgba(196, 181, 253, 0.65), inset 0 0 25px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 0 50px rgba(196, 181, 253, 0.7), inset 0 0 30px rgba(139, 92, 246, 0.5);
 }
 
 .hero-profile-img {
@@ -389,6 +390,7 @@ h2 span {
   font-weight: 700;
   letter-spacing: 0.15em;
   color: #34d399 !important; /* Cool Mint Green */
+  text-shadow: 0 0 10px rgba(52, 211, 153, 0.4);
 }
 
 /* =========================================
@@ -409,7 +411,7 @@ h2 span {
 
 .project-metadata-group {
   margin-bottom: 15px;
-  border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.3);
   padding-bottom: 10px;
 }
 
@@ -432,13 +434,13 @@ h2 span {
 }
 
 /* =========================================
-   8. TOOLKIT & TAGS
+   8. TOOLKIT & TAGS (GLOWING)
 ========================================= */
 
 .card-toolkit {
   background: var(--bg-card) !important;
   border: 1px solid var(--border-glow) !important;
-  box-shadow: inset 0 0 15px rgba(139, 92, 246, 0.12);
+  box-shadow: inset 0 0 18px rgba(139, 92, 246, 0.18), 0 0 20px rgba(139, 92, 246, 0.2);
   border-radius: 12px;
   padding: 25px;
   transition: all 0.35s ease;
@@ -446,7 +448,8 @@ h2 span {
 
 .card-toolkit:hover {
   border-color: var(--border-shine) !important;
-  box-shadow: inset 0 0 20px rgba(196, 181, 253, 0.2);
+  box-shadow: inset 0 0 25px rgba(196, 181, 253, 0.25), 0 0 30px rgba(139, 92, 246, 0.45);
+  transform: translateY(-3px);
 }
 
 .card-toolkit h3 {
@@ -472,11 +475,11 @@ h2 span {
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--elegant-lavender) !important;
-  background-color: rgba(139, 92, 246, 0.1) !important;
-  border: 1px solid rgba(139, 92, 246, 0.3) !important;
+  background-color: rgba(139, 92, 246, 0.15) !important;
+  border: 1px solid rgba(139, 92, 246, 0.4) !important;
   padding: 4px 12px;
   border-radius: 6px;
-  box-shadow: inset 0 0 8px rgba(139, 92, 246, 0.15);
+  box-shadow: inset 0 0 10px rgba(139, 92, 246, 0.2), 0 0 8px rgba(139, 92, 246, 0.2);
 }
 
 /* =========================================
@@ -489,7 +492,7 @@ h2 span {
   text-align: left;
   background: var(--bg-card) !important;
   border: 1px solid var(--border-glow) !important;
-  box-shadow: inset 0 0 20px rgba(139, 92, 246, 0.15), 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 25px rgba(139, 92, 246, 0.25), 0 0 35px rgba(139, 92, 246, 0.35);
   border-radius: 16px;
   padding: 50px;
   animation: pulseGlow 8s infinite ease-in-out;
@@ -534,32 +537,32 @@ h2 span {
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .btn-contact-primary:hover {
   filter: brightness(1.15);
   transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(139, 92, 246, 0.6);
+  box-shadow: 0 6px 30px rgba(139, 92, 246, 0.7);
 }
 
 .btn-contact-secondary {
   padding: 13px 28px;
   background-color: rgba(255, 255, 255, 0.02) !important;
   color: var(--text-main) !important;
-  border: 1px solid rgba(139, 92, 246, 0.4) !important;
+  border: 1px solid rgba(139, 92, 246, 0.5) !important;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  box-shadow: inset 0 0 10px rgba(139, 92, 246, 0.1);
+  box-shadow: inset 0 0 12px rgba(139, 92, 246, 0.15), 0 0 10px rgba(139, 92, 246, 0.15);
   transition: all 0.25s ease;
 }
 
 .btn-contact-secondary:hover {
   background-color: rgba(255, 255, 255, 0.06) !important;
   border-color: var(--elegant-lavender) !important;
-  box-shadow: 0 0 15px rgba(196, 181, 253, 0.3);
+  box-shadow: 0 0 20px rgba(196, 181, 253, 0.4);
   transform: translateY(-2px);
 }
 
